@@ -52,7 +52,7 @@ class Button:
         """
         if style is not None and not isinstance(style,str) or (style := style.lower()) not in {'primary','danger','success'}:
            raise ValueError("Invalid value. Must be either one of 'primary' (blue) , 'danger' (red) and 'success' (green) , or None")
-        return types.KeyboardButtonStyle(**{'bc_'+style: True,'icon':icon})
+        return types.KeyboardButtonStyle(**{f'bc_{style}': True,'icon':icon})
     @staticmethod
     def _is_inline(button):
         """
