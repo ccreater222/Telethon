@@ -218,7 +218,7 @@ class Button:
         same text on their own.
         """
         return cls(
-            types.KeyboardButton(text, style=Button._get_style(style, icon)),
+            types.KeyboardButton(text, style=cls._get_style(style, icon)),
             resize=resize,
             single_use=single_use,
             selective=selective,
@@ -240,7 +240,7 @@ class Button:
         bot, and if confirmed a message with geo media will be sent.
         """
         return cls(
-            types.KeyboardButtonRequestGeoLocation(text, style=Button._get_style(style, icon)),
+            types.KeyboardButtonRequestGeoLocation(text, style=cls._get_style(style, icon)),
             resize=resize,
             single_use=single_use,
             selective=selective,
@@ -262,7 +262,7 @@ class Button:
         bot, and if confirmed a message with contact media will be sent.
         """
         return cls(
-            types.KeyboardButtonRequestPhone(text, style=Button._get_style(style, icon)),
+            types.KeyboardButtonRequestPhone(text, style=cls._get_style(style, icon)),
             resize=resize,
             single_use=single_use,
             selective=selective,
@@ -291,7 +291,7 @@ class Button:
         poll will be shown, and if they do create one, the poll will be sent.
         """
         return cls(
-            types.KeyboardButtonRequestPoll(text, quiz=force_quiz, style=Button._get_style(style, icon)),
+            types.KeyboardButtonRequestPoll(text, quiz=force_quiz, style=cls._get_style(style, icon)),
             resize=resize,
             single_use=single_use,
             selective=selective,
